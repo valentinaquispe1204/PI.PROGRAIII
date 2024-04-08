@@ -47,7 +47,8 @@ class Home extends Component {
           PeliculasPopulares{" "}
           <button className="linkadetalle">
             <Link to="/PeliculasPopulares" className="linkfavoritos">
-              See all
+              Ver todo
+              
             </Link>
           </button>
         </h3>
@@ -57,15 +58,11 @@ class Home extends Component {
       mostrarCinco={true}
     />
 
-
       </main>
       
-      
-
-
+    
     );
   }
-
 
 }
 
