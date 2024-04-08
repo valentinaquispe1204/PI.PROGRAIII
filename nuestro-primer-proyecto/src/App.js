@@ -1,13 +1,21 @@
 import React from 'react'
-import Header from "./Components/Header/Header"
-import Home from './screens/Home/Home';
+import { Route, Switch } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Home from "./screens/Home/Home"
+
 function App() {
+
   return (
-    <Header/>
-    
-    
+    <>
+      <Header />
+      <Switch>
+        {/* RUTAS */}
+        <Route path='/' exact={true} component={Home}/>
+      </Switch>
+
+      
+    </>
   );
- 
 }
 
 export default App;

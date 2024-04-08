@@ -1,5 +1,7 @@
 import React from "react";
 import Search from "../Search/Search"
+import { Link } from "react-router-dom"
+
 
 function Header(props) {
     let menu = [
