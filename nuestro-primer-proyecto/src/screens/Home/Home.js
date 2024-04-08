@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Search from "../../Components/Search/Search"
-
+import PeliculasPopulares from "../../Components/PeliculasPopulares/PeliculasPopulares"
+import CartelContenedor from "../../Components/CartelContenedor/CartelContenedor"
 class Home extends Component {
   constructor(props) {
     super(props);
