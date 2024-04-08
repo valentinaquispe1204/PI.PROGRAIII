@@ -1,6 +1,7 @@
 import React, {Component}from 'react';
 import { Link } from "react-router-dom"
-
+import PeliculasPopulares from '../PeliculasPopulares/PeliculasPopulares';
+import PelisTop from "../PelisTop/PelisTop"
 
 
 class CardPelicula extends Component {
@@ -19,7 +20,10 @@ class CardPelicula extends Component {
 
 
 render(){
-    return ("valita")
+    return (
+   "hola"
+)
+   
 }
 }
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from "./Components/Header/Header";
 import Home from "./screens/Home/Home"
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom'
+import { Route, Switch} from 'react-router-dom'
 import Search from "./Components/Search/Search"
 import PeliculasPopulares from './Components/PeliculasPopulares/PeliculasPopulares';
+import PelisTop from './Components/PelisTop/PelisTop';
 
 function App() {
 
@@ -14,6 +15,9 @@ function App() {
        <Switch>
         <Home/>
       <Route path="/" exact={true} component={Home}/>
+      <Route path="/toprated" component={PelisTop}/>
+      <Route path="/pop" component={PeliculasPopulares}/>
+      <Search/>
       </Switch>
       </div>
 

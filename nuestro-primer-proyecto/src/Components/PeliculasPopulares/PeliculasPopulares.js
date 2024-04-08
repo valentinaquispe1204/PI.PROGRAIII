@@ -1,37 +1,46 @@
 import React, { Component } from "react";
-import TarjetaPelicula from "../CardPelicula/CardPelicula"
 
-class PeliculasPopulares extends Component{
-   constructor(){
-    super()
-    this.state= {peliculas:[]}
-   
-}
 
-componentDidMount(){
-    fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=04a9b8ef48334e7e5aecb64a2895739c")
-    .then((response) => response.json())
-/*     .then(data=>console.log(data))
- */    .then(data=> this.setState({peliculas: data.results}))
-  .catch(error=> console.log(error))
-}
-
-render(){
-    let favoritosCinco = this.state.peliculas.slice (0,5)
-    return(
-        <div className = "FavoritosCinco"> 
-        {console.log(this.state.peliculas)}
-        {
-                                favoritosCinco.map(( elm, idx) => <TarjetaPelicula  data= {elm}  key={idx + elm.title}/>)
-
+class PeliculasPopulares extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            popular: [],
+            page: 1
         }
+    }
+    componentDidMount(){
+        fetch("https://api.themoviedb.org/3/movie/popular").then(resp => resp.json()).then(data =>{
+            this.setState ({
+                popular : data.results.slice(0,10)
+            })
+        })
+        .catch(err => console.log(err))
 
-        </div>
+    }
+    masPopulares(){
+        fetch("https://api.themoviedb.org/3/movie/popular?page=" + (this.state.page + 1))
+        .then(resp => resp.json())
+        .then(data => {
+            this.setState({
+                popular: this.state.popular.concat(data.results),
+                page: this.state.page + 1
+            })
+        })
+        .catch(err => console.log(err))
+
+    }
+render() {
+    return (
+      <div>
+        <h2>
+            TodasPopulares
+        </h2>
+        <PeliculasPopulares popular = {this.state.populares}/>
+        <button onClick={this.masPopulares()}>ver mas </button>
+      </div>
     )
+  }
 }
-}
-
-
- 
 
 export default PeliculasPopulares;

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Search from "../../Components/Search/Search"
 import CardPelicula from "../../Components/CardPelicula/CardPelicula";
+import PelisTop from "../../Components/PelisTop/PelisTop";
+import PeliculasPopulares from "../../Components/PeliculasPopulares/PeliculasPopulares";
 
 class Home extends Component {
   constructor(props) {
@@ -39,30 +41,46 @@ class Home extends Component {
   }
   render() {
     return (
+      <div className="PadreSecciones">
+              
       <main>
-      <h3>Buscar todas las peliss</h3>
+    <br></br>
+    <br></br>
+      <h3>Buscar las pelis</h3>
       <Search/>
-
       <h3>
           PeliculasPopulares{" "}
           <button className="linkadetalle">
             <Link to="/PeliculasPopulares" className="linkfavoritos">
-              Ver todo
-              
+              Ver todas
             </Link>
           </button>
         </h3>
 
-      <CardPelicula
-      arrayMovies={this.state.arrayDePelisPopulares}
-      mostrarCinco={true}
-    />
-
+        <CardPelicula
+          arrayMovies={this.state.arrayDePelisPopulares}
+          mostrarCinco={true}
+        />
+         <h3>
+          Top Rated Movies{" "}
+          <button className="linkadetalle">
+            <Link to="/toprated" className="linkfavoritos">
+              Ver todas
+            </Link>
+          </button>
+        </h3>
+        <CardPelicula
+          arrayMovies={this.state.arrayDePelisTopRated}
+          mostrarCinco={true}
+        
+        />
       </main>
-      
+      </div>
+     
     
     );
   }
+ 
 
 }
 
