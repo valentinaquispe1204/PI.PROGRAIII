@@ -1,22 +1,30 @@
-import react, {Component} from "react";
+import React, {Component}from 'react';
+import { Link } from "react-router-dom"
+import PeliculasPopulares from '../PeliculasPopulares/PeliculasPopulares';
+import PelisTop from "../PelisTop/PelisTop"
+
 
 class CardPelicula extends Component {
-    
-        constructor(props){
-            super(props)
-            this.state = { peliculas : []}
+    constructor(props) {
+        super(props);
+        this.state = {
+            VerMas : 0
         }
-        componentDidMount(){
-                fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=7384aa0b23ce68ba408f9921ee711e62")
-                .then( response => response.json())
-                .then(data => console.log(data))
-                .catch( error => console.log("el error fue" + error))
-            }
-
-            render(){
-        return ("probando")
     }
-    
+    VerDescripcion (){
+        this.setState({VerMas:1})
+    }
+    OcultarDescripcion() {
+        this.setState({VerMas:0})
+    }
+
+
+render(){
+    return (
+   "hola"
+)
+   
+}
 }
 
 export default CardPelicula;
