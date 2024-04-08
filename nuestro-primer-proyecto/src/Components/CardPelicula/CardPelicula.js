@@ -1,6 +1,8 @@
 import React, {Component}from 'react';
 import { Link } from "react-router-dom"
 
+
+
 class CardPelicula extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,7 @@ class CardPelicula extends Component {
 
 
 render(){
-    return ("mica")
+    return ("valita")
 }
 }
 
