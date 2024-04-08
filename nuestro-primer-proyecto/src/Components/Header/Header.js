@@ -1,7 +1,5 @@
 import React from "react";
 import Search from "../Search/Search"
-import { Link } from "react-router-dom"
-
 
 function Header(props) {
     let menu = [
@@ -22,7 +20,7 @@ function Header(props) {
             ruta: '/Favoritos',
         }
     ] 
-  
+
 
     return (
     <header> <img className="logoHeader" src="./img/LogoSolo.png" alt="logo" />
