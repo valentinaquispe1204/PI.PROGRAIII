@@ -8,3 +8,4 @@ root.render(
     <App />
 );
 
+/* traemos el root de index.html y el root.render se encarga de renderizar la informacionn a index.html*/
