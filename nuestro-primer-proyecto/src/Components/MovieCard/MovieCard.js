@@ -1,5 +1,6 @@
 import React, {Component}from 'react';
 import { Link } from "react-router-dom"
+import style from "./style.css"
 
 
 
@@ -11,7 +12,7 @@ class MovieCard extends Component {
 render(){
     return (
    <article className= "card">
-        <img src={this.props.data.poster_path} alt=""/>
+        <img src={this.props.data.poster_path} />
         <h2>{this.props.data.title}</h2>
                
    </article>
