@@ -1,0 +1,46 @@
+.seccionPeliSerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Estilos para la tarjeta */
+  .card {
+    width: 250px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #008000; /* Verde oscuro para el fondo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Negro para el título */
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    color: #000000; /* Negro para el texto */
+    margin-bottom: 10px;
+  }
+  
+  .card-poster {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .cincoCard{
+    width: 100%; /* Ajusta el tamaño de la imagen al ancho de la tarjeta */
+    height: auto; /* Permite que la altura de la imagen se ajuste automáticamente */
+    max-height:300px;
+    max-width: fit-content;
+}
+  
