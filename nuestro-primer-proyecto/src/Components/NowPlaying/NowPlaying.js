@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MovieCard from "../MovieCard/MovieCard"
-
+import MovieCard from "../NowPlayingCard/NowPlayingCard"
+import nowplaying from "./nowplaying.css"
 
 class NowPlaying extends Component {
     constructor(props) {
@@ -34,7 +34,8 @@ render() {
             LasQueMuestro.map((elm, idx) => 
             <MovieCard 
             key = {idx + elm.title}
-            data = {elm}/>) : 
+            data = {elm}
+            className= "cards" />) : 
             <h3> Cargando ... </h3>
         }
       </div>

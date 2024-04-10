@@ -1,20 +1,20 @@
 import React, {Component}from 'react';
 import { Link } from "react-router-dom"
-import moviecard from "./moviecard.css";
+import topratedcard from "./topratedcard.css"
 
 
 
-class MovieCard extends Component {
+class TopRatedCard extends Component {
     constructor(props) {
         super(props);
     }
 
 render(){
     return (
-   <article className= "card">
+   <article className= "TopRatedcard">
 {/*         <img src={this.props.data.poster_path} />
  */}        <h2>{this.props.data.title}</h2>
-        <img className="cincoCard"src={`https://image.tmdb.org/t/p/w500/${this.props.data.poster_path}/images`} alt={this.props.data.title}></img>
+        <img className="imgcard"src={`https://image.tmdb.org/t/p/w500/${this.props.data.poster_path}/images`} alt={this.props.data.title}></img>
         
                
    </article>
@@ -23,4 +23,4 @@ render(){
 }
 }
 
-export default MovieCard;
+export default TopRatedCard;
