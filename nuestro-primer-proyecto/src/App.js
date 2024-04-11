@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact={true} component={Home}/>
-        <Route path="/DetallePelicula/:id" component={DetalleCard}/>
+        <Route path="/DetallePelicula/id/:id" component={DetallePelicula}/>
       </Switch>
 
 

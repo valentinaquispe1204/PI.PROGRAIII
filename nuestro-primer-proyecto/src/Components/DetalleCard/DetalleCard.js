@@ -6,8 +6,7 @@ class DetalleCard extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            DetalleCardContenido: "",
-            page: 1
+            DetalleCardContenido: null
         }
     }
 
@@ -15,23 +14,23 @@ class DetalleCard extends Component {
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=04a9b8ef48334e7e5aecb64a2895739c`)
         .then(resp => resp.json())
         .then(data =>{
-            console.log(data)
+            console.log(this.props.match.params.id)
             this.setState ({
                 DetalleCardContenido : data
             })
-            console.log(data)
         })
         .catch(er => console.log(er))
 
     }
     
-render() {
-    let DetalleCardContenido =  this.state.data
+render(){
+    let DetalleCardContenido =  this.state
 
     return (
 
       <div className = "DetallePelicula">
         {console.log(DetalleCardContenido)
+        
             // DetallePelicula.length > 0 ? 
             // DetallePelicula.map((elm, idx) => 
             // <MovieCard 
