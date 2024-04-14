@@ -17,7 +17,7 @@ class FavoritesCard extends Component {
       let arrayParse = JSON.parse(storageFavs)
       if (arrayParse !== null) {
         let Favs = arrayParse.includes(this.props.id)
-        if (estaMiPeli) {
+        if (Favs) {
             this.setState({
                 estaEnFav: true
             })

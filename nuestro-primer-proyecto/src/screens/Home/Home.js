@@ -14,7 +14,7 @@ class Home extends Component {
       loading: true,
     };
   }
-  componentDidMount() {
+   componentDidMount() {
     console.log("Estamos en componentDidMount");
      let urlPelisPopulares =
        "https://api.themoviedb.org/3/movie/popular?api_key=04a9b8ef48334e7e5aecb64a2895739c";
@@ -38,7 +38,7 @@ class Home extends Component {
       })
        )
      .catch((e) => console.log(e));
-  }
+  } 
   render() {
     return (
       <main>
