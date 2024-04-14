@@ -14,8 +14,8 @@ class DetallePelicula extends Component {
   render() {
     return (
         <div>
-{/*      {   <DetalleCard   id= {this.props.match.params.id}/>}
- */}          
+     {   <DetalleCard   id= {this.state.id}/>}
+       
         </div>
     );
   }
