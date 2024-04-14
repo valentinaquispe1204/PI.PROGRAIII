@@ -1,0 +1,21 @@
+.NowPlaying {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  }
+  
+  .cards {
+    width: calc(25% - 20px); /* Calcula el ancho de cada tarjeta, restando el margen */
+    margin: 10px; /* Margen alrededor de cada tarjeta */
+  }
+  .titulo{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    background-color: #2e2e2e;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    
+}

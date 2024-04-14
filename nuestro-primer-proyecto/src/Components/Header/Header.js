@@ -15,13 +15,13 @@ function Header() {
         </section>
         <nav className="headerDerecha">
         <article className="linksHeader">
-          <Link to="/favorites" className="linkfavoritos">
+          <Link to="/Favorites" className="linkfavoritos">
             Mis favoritos
           </Link>
-          <Link to="/populares" className="linkfavoritos">
-            Populares
+          <Link to="/NowPlayingVista" className="linkfavoritos">
+            Now playing
           </Link>
-          <Link to="/toprated" className="linkfavoritos">
+          <Link to="/TopRatedVista" className="linkfavoritos">
             Top rated
           </Link>
         </article>
