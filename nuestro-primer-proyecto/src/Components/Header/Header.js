@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
+import Search from "../Search/Search"
 
-function Header(props) {
+function Header() {
    
     return (
     <header> 
@@ -27,7 +28,7 @@ function Header(props) {
       </nav>
     
     
-   
+      <Search/>
     </header>
   )
 }

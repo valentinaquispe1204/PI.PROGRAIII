@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Search from "../../Components/Search/Search"
 import MovieCard from "../../Components/NowPlayingCard/NowPlayingCard";
 import TopRated from "../../Components/TopRated/TopRated";
 import NowPlaying from "../../Components/NowPlaying/NowPlaying";
@@ -43,6 +42,8 @@ class Home extends Component {
   render() {
     return (
       <main>
+                <h3>BUSCAR LAS PELIS</h3>
+
         <section>
           <h1 className="titulo">NOW PLAYING</h1>
           <NowPlaying />
