@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import detallecard from "./detallecard.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class DetalleCard extends Component {
@@ -24,7 +23,7 @@ class DetalleCard extends Component {
     }
     
 render(){
-    let DetalleCardContenido =  this.state
+    let DetalleCardContenido =  this.state.DetalleCardContenido
 
     return (
 
