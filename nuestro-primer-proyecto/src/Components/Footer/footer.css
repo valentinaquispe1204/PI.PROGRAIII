@@ -1,0 +1,16 @@
+footer{
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10vh;
+
+}
+
+.nombresFooter{
+    color: #fff;
+    font-size:1.2em;
+    font-family: sans-serif;   
+     
+}

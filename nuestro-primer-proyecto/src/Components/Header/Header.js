@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
-import Search from "../Search/Search"
-
 function Header() {
-   
     return (
     <header> 
+
         <section className="headerIzquierda">
         <img className="logoHeader" src="./img/LogoSolo.png" alt="logo" />
         <a href="/" className="nombrepagina">
@@ -15,20 +13,18 @@ function Header() {
         </section>
         <nav className="headerDerecha">
         <article className="linksHeader">
-          <Link to="/favorites" className="linkfavoritos">
+          <Link to="/Favorites" className="linkfavoritos">
             Mis favoritos
           </Link>
-          <Link to="/populares" className="linkfavoritos">
-            Populares
+          <Link to="/NowPlayingVista" className="linkfavoritos">
+            Now playing
           </Link>
-          <Link to="/toprated" className="linkfavoritos">
+          <Link to="/TopRatedVista" className="linkfavoritos">
             Top rated
           </Link>
-        </article>
+          </article>
       </nav>
-    
-    
-      <Search/>
+      
     </header>
   )
 }

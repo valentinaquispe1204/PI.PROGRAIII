@@ -42,7 +42,7 @@ class Home extends Component {
   render() {
     return (
       <main>
-                <h3>BUSCAR LAS PELIS</h3>
+                
 
         <section>
           <h1 className="titulo">NOW PLAYING</h1>
