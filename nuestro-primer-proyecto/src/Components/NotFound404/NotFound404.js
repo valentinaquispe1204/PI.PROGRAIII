@@ -1,17 +1,17 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// class NotFound404 extends Component {
+class NotFound404 extends Component {
     
-// render(){
+render(){
 
-//     return (
+    return (
         
-//       <div className = "NotFound404">
-//         <h1>Error 404 Not Found</h1>
-//         <p>La página que buscas no existe.</p>
-//       </div>
-//     )
-//   }
-// }
+      <div className = "NotFound404">
+        <h1>Error 404 Not Found</h1>
+        <p>La página que buscas no existe.</p>
+      </div>
+    )
+  }
+}
 
-// export default NotFound404;
+export default NotFound404;

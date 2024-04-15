@@ -7,12 +7,13 @@ class NowPlaying extends Component {
         super(props)
         this.state = {
             NowPlaying: [],
-        favoritos: localStorage.getItem('favoritos') ? localStorage.getItem('favoritos') :[],
+            favoritos: localStorage.getItem('favoritos') ? JSON.parse(localStorage.getItem('favoritos')) :[],
             page: 1
         }
     }
 
     componentDidMount(){
+
         fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=04a9b8ef48334e7e5aecb64a2895739c")
         .then(resp => resp.json())
         .then(data =>{
@@ -33,6 +34,7 @@ class NowPlaying extends Component {
     
 render() {
     let LasQueMuestro = this.state.NowPlaying.slice(0,5)
+
     return (
       <div className = "NowPlaying">
         {console.log(LasQueMuestro)}

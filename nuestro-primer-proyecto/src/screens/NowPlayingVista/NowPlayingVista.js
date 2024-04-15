@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import DetalleCard from "../../Components/DetalleCard/DetalleCard";
+import MovieCard from "../../Components/NowPlayingCard/NowPlayingCard";
 import NowPlayingTodos from "../../Components/NowPlayingTodos/NowPlayingTodos";
+import NowPlaying from "../../Components/NowPlaying/NowPlaying";
+import NowPlayingCard from "../../Components/NowPlayingCard/NowPlayingCard"
 import nowplayingvista from "./nowplayingvista.css"
 
 class NowPlayingVista extends Component {
@@ -8,8 +10,19 @@ class NowPlayingVista extends Component {
     super(props)
     this.state = {
       NowPlayingPeliculas: null,
-  
+      favoritos : localStorage.getItem('favoritos'),
+      peliculas : []
+      }
     }
+
+    componentDidMount(){
+      // algo aca
+    }
+  
+    updateStateFavs(array){
+      this.setState({
+        peliculas: array
+      })
     }
 
   render() {
@@ -17,7 +30,11 @@ class NowPlayingVista extends Component {
       <main>
         <section>
           <h1 className="titulo">SEE ALL IN NOW PLAYING</h1>
-      <NowPlayingTodos />
+
+          {/* <NowPlayingTodos 
+          pasarle como props la funcion updateStateFavs
+          /> */}
+      
         </section>
         </main>
     );
