@@ -5,8 +5,10 @@ import Home from "./screens/Home/Home"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import DetallePelicula from "./screens/DetallePelicula/DetallePelicula"
 
-import Favorites from './Components/FavoritesCard/FavoritesCard';
+//import Favorites from './Components/FavoritesCard/FavoritesCard';
 import NotFound404 from './Components/NotFound404/NotFound404';
+//import FavoritesBox from './Components/FavoritesBox/FavoritesBox';
+import Favoritos from './screens/Favoritos/Favoritos';
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
         <Route path="/" exact={true} component={Home}/>
         <Route path="/DetallePelicula/id/:id" component={DetallePelicula}/>
 
-        <Route path="/Favorites" component={Favorites}/>
+        <Route path="/favorites" component={Favoritos}/>
 
         {/* Error va al final y sin path */}
         <Route component={NotFound404}/>

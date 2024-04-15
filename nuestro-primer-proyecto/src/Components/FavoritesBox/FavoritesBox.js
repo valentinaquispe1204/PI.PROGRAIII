@@ -1,7 +1,7 @@
 import React, {Component}from 'react';
 import favoritesbox from "./favoritesbox.css"
 import FavoritesCard from '../FavoritesCard/FavoritesCard';
-
+// import Favoritos from '../../screens/Favoritos/Favoritos';
 
 
 class FavoritesBox extends Component {
@@ -13,9 +13,8 @@ class FavoritesBox extends Component {
       return (
 
         <section className='FavoritesBox'>
+          <h1>Mis pelis favoritas</h1>
           <FavoritesCard/>
-          <h1>FAVORITES</h1>
-          <button className='RemoveFavs'>Sacar de favoritos</button>
 
         </section>
       )

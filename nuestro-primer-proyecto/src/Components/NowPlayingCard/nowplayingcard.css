@@ -2,7 +2,7 @@
   /* Estilos para la tarjeta */
   .card {
     width: 150px;
-    height: 250px;
+    height: 320px;
     margin: 20px;
     padding: 15px;
     border-radius: 10px;
@@ -39,4 +39,11 @@
     
 }
 
-  
+/* estilos para el boton de favoritos de agregar y sacar */
+.btnplayingcard{
+  width: 80px;
+  height: 40px;
+  background-color:#615e5e;
+  font-weight: bold;
+  /* faltaria centrarlo */
+}
