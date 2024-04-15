@@ -13,7 +13,6 @@ class NowPlaying extends Component {
     }
 
     componentDidMount(){
-
         fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=04a9b8ef48334e7e5aecb64a2895739c")
         .then(resp => resp.json())
         .then(data =>{
