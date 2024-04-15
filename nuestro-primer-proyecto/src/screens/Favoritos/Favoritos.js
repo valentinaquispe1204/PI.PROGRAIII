@@ -17,9 +17,8 @@ class Favoritos extends Component {
       let storageParse = JSON.parse(this.state.favoritos)
       
       Promise.all(
-        // invalida API key CHEQUEAR BIEN (la saque de now playling....)
         storageParse.map((elm) => fetch(`https://api.themoviedb.org/3/movie/${elm}?api_key=04a9b8ef48334e7e5aecb64a2895739c`)
-        .then(res => res.json())
+        .then(resp => resp.json())
         )
       )
       //.then((data) => console.log(data))

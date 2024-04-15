@@ -1,4 +1,4 @@
-import React, {Component}from 'react';
+import React, {Component} from 'react';
 import { Link } from "react-router-dom"
 import nowplayingcard from "./nowplayingcard.css";
 import NowPlaying from '../NowPlaying/NowPlaying';
@@ -43,6 +43,7 @@ sacarFavs(idPelicula){
 // metodo para sacar todos los favoritos ?
 
 render(){
+    console.log(this.props.estaEnFavorito);
     return (
    <article className= "card">   
         <Link to={"/DetallePelicula/id/" + this.props.data.id}>
@@ -56,8 +57,6 @@ render(){
             :
             <button onClick={()=> this.agregarFavs(this.props.data.id)} className='btnplayingcard'>Agregar a favoritos</button>
         }
-   
-    
                
    </article>
 )

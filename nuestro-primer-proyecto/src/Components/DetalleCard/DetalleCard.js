@@ -23,9 +23,6 @@ class DetalleCard extends Component {
             .catch(er => console.log(er))
 
     }
-    
-
-
 
     render() {
         let DetalleCardContenido = this.state
@@ -41,8 +38,6 @@ class DetalleCard extends Component {
                 <p> RATING : {DetalleCardContenido.poppularity}</p>
                 <p>ESTRENO : {DetalleCardContenido.release_date}</p>
                 <p> DURACIÓN : {DetalleCardContenido.runtime}</p>
-
-
                 
 
             </div>
