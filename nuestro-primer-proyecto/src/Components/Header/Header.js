@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"
-import Search from "../Search/Search"
-
 function Header() {
-   
     return (
     <header> 
+
         <section className="headerIzquierda">
         <img className="logoHeader" src="./img/LogoSolo.png" alt="logo" />
         <a href="/" className="nombrepagina">
@@ -24,11 +22,9 @@ function Header() {
           <Link to="/TopRatedVista" className="linkfavoritos">
             Top rated
           </Link>
-        </article>
+          </article>
       </nav>
-    
-    
-      <Search/>
+      
     </header>
   )
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import detallecard from "./detallecard.css"
 
+
 class DetalleCard extends Component {
     constructor(props) {
         super(props)
@@ -22,11 +23,14 @@ class DetalleCard extends Component {
             .catch(er => console.log(er))
 
     }
+    
+
+
 
     render() {
         let DetalleCardContenido = this.state
-
         return (
+            
             <div className="DetallePelicula">
                 {console.log(DetalleCardContenido)}
                 <img className="imgcard" src={`https://image.tmdb.org/t/p/w500/${DetalleCardContenido.poster_path}/images`} alt={DetalleCardContenido.title}></img>
@@ -39,7 +43,7 @@ class DetalleCard extends Component {
                 <p> DURACIÓN : {DetalleCardContenido.runtime}</p>
 
 
-
+                
 
             </div>
         )
