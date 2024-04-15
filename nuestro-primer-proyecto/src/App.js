@@ -4,7 +4,7 @@ import Home from "./screens/Home/Home"
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import DetallePelicula from "./screens/DetallePelicula/DetallePelicula"
-
+import Footer from './Components/Footer/Footer';
 import Favorites from './Components/FavoritesCard/FavoritesCard';
 import NotFound404 from './Components/NotFound404/NotFound404';
 import NowPlayingTodos from './Components/NowPlayingTodos/NowPlayingTodos';
@@ -30,8 +30,9 @@ function App() {
         <Route component={NotFound404}/>
       </Switch>
 
-
+      <Footer />
      </React.Fragment>
+    
   );
 }
 export default App;
