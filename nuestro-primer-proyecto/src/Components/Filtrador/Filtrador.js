@@ -1,8 +1,6 @@
 import { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import './formbusqueda.css'
 
-class FormBusqueda extends Component {
+class Filtrador extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -24,17 +22,15 @@ class FormBusqueda extends Component {
     render(){
         return(
             <form
-                onSubmit={(event)=> this.evitarSubmit(event)}
-            >
+                onSubmit={(event)=> this.evitarSubmit(event)}>
                 <input
+                type = "text"
                 onChange={(event)=> this.guardarValor(event)}
-                placeholder="Busca una pelicula" />
-                <Link to={`/resultadosBusqueda/${this.state.valorInput}`}>
-                    <button type="submit">Buscar</button>
-                </Link>
+                value = {this.state.valorInput}
+                placeholder="Busca tu pelicula" />
             </form>
         )
     }
 }
 
-export default FormBusqueda
+export default Filtrador
