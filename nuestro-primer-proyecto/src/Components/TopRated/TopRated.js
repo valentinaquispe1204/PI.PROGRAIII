@@ -33,7 +33,7 @@ class TopRated extends Component {
     
 render() {
     let LasQueMuestro = this.state.TopRated.slice(0,5)
-
+    
     return (
       <div className = "TopRated">
         {console.log(LasQueMuestro)}
@@ -49,6 +49,7 @@ render() {
 
             />) : 
             <h3> Cargando ... </h3>
+
         }
       </div>
     )

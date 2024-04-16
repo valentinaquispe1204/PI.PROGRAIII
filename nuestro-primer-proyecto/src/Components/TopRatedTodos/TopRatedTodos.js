@@ -42,6 +42,8 @@ class TopRatedTodos extends Component {
           favoritos: array
         })
       }
+
+    // cargarMasPelis(){}
     
 render() {
     let LasQueMuestroTodas = this.state.TopRatedTodos
@@ -69,6 +71,8 @@ render() {
             className= "cards" />):
             <h3>Cargando...</h3> 
         }
+        {/* BOTON DE CARGAR 20 PELICULAS MAS CADA VEZ QUE SE TOQUE */}
+        {/* <button onClick={()=> (this.state.TopRatedTodos.slice(0,20))} className='btncargandomas'>Cargar mas peliculas</button>         */}
         </div>
       </div>
     )

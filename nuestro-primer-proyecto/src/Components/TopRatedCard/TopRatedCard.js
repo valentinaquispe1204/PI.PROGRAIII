@@ -51,7 +51,6 @@ render(){
             :
             <button onClick={()=> this.agregarFavs(this.props.data.id)} className='btnplayingcard'>Agregar a favoritos</button>
         }
-               
    </article>
 )
    

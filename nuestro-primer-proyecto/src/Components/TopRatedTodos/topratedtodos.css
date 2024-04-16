@@ -41,5 +41,9 @@
     justify-content: space-between; 
 }
 
-
-
+.btncargandomas{
+  width: 100px;
+  height: 60px;
+  background-color:#615b5b;
+  font-weight: bold;
+}
