@@ -8,7 +8,7 @@ class Loader extends Component {
 
     render() {
         return (
-            <img className="containerLoader" src="./img/loading.jpg" alt="cargando..." />
+            <img src="./img/cargando.gif" alt="cargando" />
         );
     }
 }
