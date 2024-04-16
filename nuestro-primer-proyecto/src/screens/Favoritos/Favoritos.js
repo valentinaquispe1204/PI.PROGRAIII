@@ -12,26 +12,6 @@ class Favoritos extends Component {
     }
   }
 
-  componentDidMount(){
-    if(this.state.favoritos !== null){
-      let storageParse = JSON.parse(this.state.favoritos)
-      
-      Promise.all(
-        storageParse.map((elm) => fetch(`https://api.themoviedb.org/3/movie/${elm}?api_key=04a9b8ef48334e7e5aecb64a2895739c`)
-        .then(resp => resp.json())
-        )
-      )
-      //.then((data) => console.log(data))
-      .then((data) => this.setState({peliculas: data}, ()=> console.log( 'log de favoritos',this.state.peliculas)))
-      .catch((e) => console.log(e))
-    }
-  }
-
-  updateStateFavs(array){
-    this.setState({
-      peliculas: array
-    })
-  }
 
   render() {
     return (

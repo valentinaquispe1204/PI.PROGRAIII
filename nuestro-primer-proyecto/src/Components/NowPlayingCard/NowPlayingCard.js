@@ -8,7 +8,6 @@ class MovieCard extends Component {
         super(props);
     }
 
-
 // metodo para el boton de agregar favoritos
 agregarFavs(idPelicula){
     let storageFavs = localStorage.getItem('favoritos')

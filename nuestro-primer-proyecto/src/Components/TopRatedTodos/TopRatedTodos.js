@@ -8,6 +8,8 @@ class TopRatedTodos extends Component {
         super(props)
         this.state = {
             TopRatedTodos: [],
+            favoritos : localStorage.getItem('favoritos')? JSON.parse(localStorage.getItem('favoritos')) :[],
+            peliculas : [],
             backup:[],
         }
     }
@@ -34,6 +36,14 @@ class TopRatedTodos extends Component {
             TopRatedTodos: peliculasFiltradas
         })
     }
+
+    updateStateFavs(array){
+        this.setState({
+          favoritos: array
+        })
+      }
+
+    // cargarMasPelis(){}
     
 render() {
     let LasQueMuestroTodas = this.state.TopRatedTodos
@@ -51,14 +61,18 @@ render() {
         <div className="cardsFacha">
         {
             this.state.TopRatedTodos.length >0 ? 
-
             this.state.TopRatedTodos.map((elm, idx) => 
             <MovieCard 
             key = {idx + elm.title}
             data = {elm}
+            estaEnFavorito = {this.state.favoritos.includes(elm.id)}
+            updateStateFavs = {(array) => this.updateStateFavs(array)}
+
             className= "cards" />):
             <h3>Cargando...</h3> 
         }
+        {/* BOTON DE CARGAR 20 PELICULAS MAS CADA VEZ QUE SE TOQUE */}
+        {/* <button onClick={()=> (this.state.TopRatedTodos.slice(0,20))} className='btncargandomas'>Cargar mas peliculas</button>         */}
         </div>
       </div>
     )
