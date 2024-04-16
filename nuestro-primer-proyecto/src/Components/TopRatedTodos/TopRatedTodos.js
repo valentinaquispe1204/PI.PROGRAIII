@@ -42,7 +42,7 @@ render() {
       <div className = "TopRated">
         {console.log(LasQueMuestroTodas)}
         <h1 className="titulo">THIS IS ALL IN TOP RATED</h1>
-        <div className="filtrofacha">
+                <div className="filtrofacha">
 
         <Filtrador 
             filtrarPeliculas={(valorInput)=>this.filtrarPeliculas(valorInput)}
