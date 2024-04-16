@@ -1,4 +1,5 @@
 import { Component } from "react";
+import filtrador from "./filtrador.css";
 
 class Filtrador extends Component {
     constructor(props){
