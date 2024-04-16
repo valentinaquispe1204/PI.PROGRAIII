@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+    align-items: center;
   }
   
   .cards {
@@ -24,13 +25,11 @@
     width: 100%;
     height: 50px;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 
 .filtrofacha{
-  display: flex;
-   
+    display: flex;
     width: 100%;
     height: 50px;
     align-items: center;
@@ -38,7 +37,37 @@
 }
 
 .cardsFacha{
-  display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
 }
+
+
+.ContenedorBotonVerMas{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center; 
+  align-items: center;
+  margin: auto;
+  
+  }
+  
+  .botonVerMas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  font-weight: bold; 
+  cursor: pointer;
+  margin: 20px;
+  background-color: #5f5d5d; /* Verde oscuro para el fondo */
+  }
+  
+  .botonVerMas button:hover {
+  background-color: #524d4d; /* Color de fondo al pasar el ratón */
+  }
