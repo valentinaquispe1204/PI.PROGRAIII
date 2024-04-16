@@ -14,7 +14,7 @@ class FavoritesBox extends Component {
 
         <section className='FavoritesBox'>
           <h1>Mis pelis favoritas</h1>
-          <FavoritesCard/>
+          <FavoritesCard />
 
         </section>
       )

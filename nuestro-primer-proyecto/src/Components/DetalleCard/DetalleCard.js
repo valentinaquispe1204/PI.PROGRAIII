@@ -7,7 +7,7 @@ class DetalleCard extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            DetalleCardContenido: null
+            DetalleCardContenido: []
         }
     }
 
@@ -26,21 +26,26 @@ class DetalleCard extends Component {
 
     render() {
         let DetalleCardContenido = this.state
+        console.log(DetalleCardContenido.DetalleCardContenido.id);
+         
         return (
-            
+
+             this.state.DetalleCardContenido.length !== 0 ?
+
             <div className="DetallePelicula">
-                {console.log(DetalleCardContenido)}
-                <img className="imgcard" src={`https://image.tmdb.org/t/p/w500/${DetalleCardContenido.poster_path}/images`} alt={DetalleCardContenido.title}></img>
-                <p> {DetalleCardContenido.title}</p>
-                {console.log(DetalleCardContenido.data)}
+                <img className="imgcardDetalle" src={`https://image.tmdb.org/t/p/w500/${DetalleCardContenido.DetalleCardContenido.poster_path}/images`} alt={DetalleCardContenido.DetalleCardContenido.title}></img>
+                <p> {DetalleCardContenido.DetalleCardContenido.title}</p>
                 <p>GENERO : AGREGAR GENEROS CON MAP </p>
-                <p> SINOPSIS {DetalleCardContenido.overview}: </p>
-                <p> RATING : {DetalleCardContenido.poppularity}</p>
-                <p>ESTRENO : {DetalleCardContenido.release_date}</p>
-                <p> DURACIÓN : {DetalleCardContenido.runtime}</p>
+                <p> SINOPSIS : {DetalleCardContenido.DetalleCardContenido.overview} </p>
+                <p> RATING : {DetalleCardContenido.DetalleCardContenido.popularity}</p>
+                <p>ESTRENO : {DetalleCardContenido.DetalleCardContenido.release_date}</p>
+                <p> DURACIÓN : {DetalleCardContenido.DetalleCardContenido.runtime}</p>
+            </div> :
+            <h3>Loader</h3> 
+
                 
 
-            </div>
+            
         )
     }
 }
