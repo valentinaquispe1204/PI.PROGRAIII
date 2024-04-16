@@ -9,6 +9,8 @@ import Favoritos from './screens/Favoritos/Favoritos';
 import NotFound404 from './Components/NotFound404/NotFound404';
 import NowPlayingTodos from './Components/NowPlayingTodos/NowPlayingTodos';
 import TopRatedTodos from './Components/TopRatedTodos/TopRatedTodos';
+import ResultadoBusqueda from './screens/ResultadoBusqueda/ResultadoBusqueda';
+
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/favorites" component={Favoritos}/>
         <Route path="/NowPlayingVista" component={NowPlayingTodos} />
         <Route path="/TopRatedVista" component={TopRatedTodos} />
+        <Route path="/busqueda/:busqueda" component={ResultadoBusqueda}/>
+
 
         {/* Error va al final y sin path */}
         <Route component={NotFound404}/>
