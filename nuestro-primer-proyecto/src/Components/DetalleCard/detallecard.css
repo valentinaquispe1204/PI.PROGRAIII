@@ -18,7 +18,7 @@
   .DetallePelicula p {
     margin-bottom: 10px;
     font-size: 18px;
-    color: white;
+    color: rgb(218, 177, 225);
   }
   
   .DetallePelicula p:first-child {
