@@ -54,9 +54,12 @@ render() {
       <div className = "NowPlaying">
         {console.log(LasQueMuestroTodas)}
         <h1 className="titulo">THIS IS ALL IN NOW PLAYING</h1>
+        <div className="filtrofacha">
         <Filtrador 
             filtrarPeliculas={(valorInput)=>this.filtrarPeliculas(valorInput)}
         />
+        </div>
+        <div className="cardsFacha">
         {
             LasQueMuestroTodas.length > 0 ? 
             LasQueMuestroTodas.map((elm, idx) => 
@@ -69,6 +72,7 @@ render() {
             className= "cards" />):
             <h3>Cargando...</h3> 
         }
+        </div>
       </div>
     )
   }

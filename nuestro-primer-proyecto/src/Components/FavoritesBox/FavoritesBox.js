@@ -38,27 +38,9 @@ class FavoritesBox extends Component {
       return (
         <div className = "FavoritesBox">
           <h1>Mis pelis favoritas</h1>
-        
-          {
-          this.state.peliculas.length > 0 
-          ?
-          this.state.peliculas.map((elm, idx) => <NowPlayingCard
-          key = {`${idx}-${elm.name}`}
-          data = {elm}
-          estaEnFavorito = {true}
-          updateStateFavs = {(array) => this.updateStateFavs(array)}
-          />)
-          :
-          <h1>No tenes ninguna peli favorita aun</h1>
-        }
+          <FavoritesCard />
 
-      </div>
-      
-        // <section className='FavoritesBox'>
-        //   <h1>Mis pelis favoritas</h1>
-        //   <FavoritesCard/>
-
-        // </section>
+        </div>
       )
     }
   }

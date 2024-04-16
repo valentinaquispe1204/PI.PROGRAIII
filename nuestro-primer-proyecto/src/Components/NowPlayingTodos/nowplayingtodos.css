@@ -7,7 +7,15 @@
   .cards {
     width: calc(25% - 20px); /* Calcula el ancho de cada tarjeta, restando el margen */
     margin: 10px; /* Margen alrededor de cada tarjeta */
+    
   }
+  .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
   .titulo{
     display: flex;
     color: white;
@@ -18,4 +26,19 @@
     align-items: center;
     justify-content: center;
     
+}
+
+.filtrofacha{
+  display: flex;
+   
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsFacha{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }

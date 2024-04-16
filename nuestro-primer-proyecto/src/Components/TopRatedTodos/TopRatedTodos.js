@@ -50,9 +50,13 @@ render() {
       <div className = "TopRated">
         {console.log(LasQueMuestroTodas)}
         <h1 className="titulo">THIS IS ALL IN TOP RATED</h1>
+        <div className="filtrofacha">
+
         <Filtrador 
             filtrarPeliculas={(valorInput)=>this.filtrarPeliculas(valorInput)}
         />
+        </div>
+        <div className="cardsFacha">
         {
             this.state.TopRatedTodos.length >0 ? 
             this.state.TopRatedTodos.map((elm, idx) => 
@@ -65,6 +69,7 @@ render() {
             className= "cards" />):
             <h3>Cargando...</h3> 
         }
+        </div>
       </div>
     )
   }
