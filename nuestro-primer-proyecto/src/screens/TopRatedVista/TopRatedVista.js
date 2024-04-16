@@ -9,7 +9,6 @@ class TopRatedVista extends Component {
     super(props)
     this.state = {
       TopRatedPeliculas: null,
-  
     }
     }
 

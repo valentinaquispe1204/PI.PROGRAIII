@@ -8,6 +8,8 @@ class TopRatedTodos extends Component {
         super(props)
         this.state = {
             TopRatedTodos: [],
+            favoritos : localStorage.getItem('favoritos')? JSON.parse(localStorage.getItem('favoritos')) :[],
+            peliculas : [],
             backup:[],
         }
     }
@@ -34,6 +36,12 @@ class TopRatedTodos extends Component {
             TopRatedTodos: peliculasFiltradas
         })
     }
+
+    updateStateFavs(array){
+        this.setState({
+          favoritos: array
+        })
+      }
     
 render() {
     let LasQueMuestroTodas = this.state.TopRatedTodos
@@ -47,11 +55,13 @@ render() {
         />
         {
             this.state.TopRatedTodos.length >0 ? 
-
             this.state.TopRatedTodos.map((elm, idx) => 
             <MovieCard 
             key = {idx + elm.title}
             data = {elm}
+            estaEnFavorito = {this.state.favoritos.includes(elm.id)}
+            updateStateFavs = {(array) => this.updateStateFavs(array)}
+
             className= "cards" />):
             <h3>Cargando...</h3> 
         }

@@ -40,8 +40,7 @@ sacarFavs(idPelicula){
 render(){
     return (
    <article className= "TopRatedcard">
-    <Link to={"/DetallePelicula/id/" + this.props.data.id}>
-    {/* <img src={this.props.data.poster_path} />*/}        
+    <Link to={"/DetallePelicula/id/" + this.props.data.id}>     
         <h2>{this.props.data.title}</h2>
         <img className="imgcard"src={`https://image.tmdb.org/t/p/w500/${this.props.data.poster_path}/images`} alt={this.props.data.title}></img>
     </Link>
