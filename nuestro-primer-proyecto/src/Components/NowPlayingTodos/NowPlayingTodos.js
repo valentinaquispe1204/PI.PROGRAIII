@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Filtrador from "../Filtrador/Filtrador";
+import Loader from "../Loader/Loader";
 import MovieCard from "../NowPlayingCard/NowPlayingCard"
 import nowplayingtodos from "./nowplayingtodos.css"
 
@@ -83,7 +84,7 @@ render() {
                 updateStateFavs = {(array) => this.updateStateFavs(array)}
 
                 className= "cards" />):
-            <h3>Cargando...</h3> 
+            <Loader/>
         }
 
         <div className="ContenedorBotonVerMas">
