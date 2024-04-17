@@ -8,75 +8,88 @@ class TopRatedTodos extends Component {
         super(props)
         this.state = {
             TopRatedTodos: [],
-            favoritos : localStorage.getItem('favoritos')? JSON.parse(localStorage.getItem('favoritos')) :[],
-            peliculas : [],
-            backup:[],
+            favoritos: localStorage.getItem('favoritos') ? JSON.parse(localStorage.getItem('favoritos')) : [],
+            peliculas: [],
+            backup: [],
+            page: 0,
         }
     }
-    componentDidMount(){
+    componentDidMount() {
         fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=04a9b8ef48334e7e5aecb64a2895739c")
-        .then(resp => resp.json())
-        .then(data =>{
-            console.log(data)
-            this.setState ({
-                TopRatedTodos : data.results,
-                backup : data.results
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data)
+                this.setState({
+                    peliculas: data.results,
+                    backup: data.results
+                })
+                console.log(data)
             })
-            console.log(data)
-        })
-        .catch(er => console.log(er))
+            .catch(er => console.log(er))
 
     }
 
-    filtrarPeliculas(valorInput){
+    filtrarPeliculas(valorInput) {
         let peliculasFiltradas = this.state.backup.filter(
-            (elm)=> elm.title.toLowerCase().includes(valorInput.toLowerCase())
-            )
+            (elm) => elm.title.toLowerCase().includes(valorInput.toLowerCase())
+        )
         this.setState({
-            TopRatedTodos: peliculasFiltradas
+            peliculas: peliculasFiltradas
         })
     }
 
-    updateStateFavs(array){
+    updateStateFavs(array) {
         this.setState({
-          favoritos: array
+            favoritos: array
         })
-      }
+    }
 
-    // cargarMasPelis(){}
-    
-render() {
-    let LasQueMuestroTodas = this.state.TopRatedTodos
-    console.log(this.state.peliculas);
-    return (
-      <div className = "TopRated">
-        {console.log(LasQueMuestroTodas)}
-        <h1 className="titulo">THIS IS ALL IN TOP RATED</h1>
+    cargarMasPeliculas() {
+        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=04a9b8ef48334e7e5aecb64a2895739c&page=${(this.state.page + 1)}`)
+            .then(resp => resp.json())
+            .then(data => this.setState({
+                page: this.state.page + 1,
+                peliculas: this.state.peliculas.concat(data.results),
+                backup: this.state.peliculas.concat(data.results)
+            }))
+            .catch(err => console.log(err))
+    }
+
+    render() {
+        let LasQueMuestroTodas = this.state.peliculas
+        console.log(this.state.peliculas);
+        return (
+            <div className="TopRated">
+                {console.log(LasQueMuestroTodas)}
+                <h1 className="titulo">THIS IS ALL IN TOP RATED</h1>
                 <div className="filtrofacha">
 
-        <Filtrador 
-            filtrarPeliculas={(valorInput)=>this.filtrarPeliculas(valorInput)}
-        />
-        </div>
-        <div className="cardsFacha">
-        {
-            this.state.TopRatedTodos.length >0 ? 
-            this.state.TopRatedTodos.map((elm, idx) => 
-            <MovieCard 
-            key = {idx + elm.title}
-            data = {elm}
-            estaEnFavorito = {this.state.favoritos.includes(elm.id)}
-            updateStateFavs = {(array) => this.updateStateFavs(array)}
+                    <Filtrador
+                        filtrarPeliculas={(valorInput) => this.filtrarPeliculas(valorInput)}
+                    />
+                </div>
+                <div className="cardsFacha">
+                    {
+                        this.state.peliculas.length > 0 ?
+                            this.state.peliculas.map((elm, idx) =>
+                                <MovieCard
+                                    key={idx + elm.title}
+                                    data={elm}
+                                    estaEnFavorito={this.state.favoritos.includes(elm.id)}
+                                    updateStateFavs={(array) => this.updateStateFavs(array)}
 
-            className= "cards" />):
-            <h3>Cargando...</h3> 
-        }
-        {/* BOTON DE CARGAR 20 PELICULAS MAS CADA VEZ QUE SE TOQUE */}
-        {/* <button onClick={()=> (this.state.TopRatedTodos.slice(0,20))} className='btncargandomas'>Cargar mas peliculas</button>         */}
-        </div>
-      </div>
-    )
-  }
+                                    className="cards" />) :
+                            <h3>Cargando...</h3>
+                    }
+                    <div className="ContenedorBotonVerMas">
+                        <button className="botonVerMas" onClick={() => this.cargarMasPeliculas()}>
+                            Mas peliculas
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default TopRatedTodos;

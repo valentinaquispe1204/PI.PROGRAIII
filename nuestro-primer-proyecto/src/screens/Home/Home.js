@@ -18,8 +18,6 @@ class Home extends Component {
   render() {
     return (
       <main>
-                
-
         <section>
           <h1 className="titulo">NOW PLAYING</h1>
           <NowPlaying />
@@ -27,7 +25,6 @@ class Home extends Component {
           <TopRated />
         </section>
       </main>
-    
     );
   }
  
