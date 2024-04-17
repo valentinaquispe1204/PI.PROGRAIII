@@ -48,7 +48,7 @@ render() {
             updateStateFavs = {(array) => this.updateStateFavs(array)}
 
             />) : 
-            <h3> Cargando ... </h3>
+            <h3> Cargandoo ... </h3>
 
         }
       </div>

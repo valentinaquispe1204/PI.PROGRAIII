@@ -1,74 +1,71 @@
 .TopRated {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Distribuye el espacio entre las tarjetas */
-    align-items: center;
-  }
-  
-  .cards {
-    width: calc(25% - 20px); /* Calcula el ancho de cada tarjeta, restando el margen */
-    margin: 10px; /* Margen alrededor de cada tarjeta */
-  }
-  .card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Distribuye el espacio entre las tarjetas */
+  align-items: center;
 }
-  .titulo{
-    display: flex;
-    color: white;
-    font-weight: bold;
-    background-color: #2e2e2e;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    
+
+.cards {
+  width: calc(25% - 20px); /* Calcula el ancho de cada tarjeta, restando el margen */
+  margin: 10px; /* Margen alrededor de cada tarjeta */
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.titulo{
+  display: flex;
+  color: white;
+  font-weight: bold;
+  background-color: #2e2e2e;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .filtrofacha{
   display: flex;
-   
-    width: 100%;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardsFacha{
   display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
 }
 
 
-
 .ContenedorBotonVerMas{
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center; 
-  align-items: center;
-  margin: auto;
+display: flex;
+/* flex-wrap: wrap; */
+justify-content: center; 
+align-items: center;
+margin: auto;
 
 }
 
 .botonVerMas{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  align-items: center;
-  width: 250px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  outline: none;
-  font-weight: bold; 
-  cursor: pointer;
-  margin: 20px;
-  background-color: #5f5d5d; /* Verde oscuro para el fondo */
+display: flex;
+flex-wrap: wrap;
+justify-content: center; 
+align-items: center;
+width: 250px;
+padding: 10px;
+font-size: 16px;
+border-radius: 4px;
+outline: none;
+font-weight: bold; 
+cursor: pointer;
+margin: 20px;
+background-color: #5f5d5d; /* Verde oscuro para el fondo */
 }
 
 .botonVerMas button:hover {
-  background-color: #524d4d; /* Color de fondo al pasar el ratón */
-} 
+background-color: #524d4d; /* Color de fondo al pasar el ratón */
+}

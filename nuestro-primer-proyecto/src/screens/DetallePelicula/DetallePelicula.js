@@ -11,6 +11,7 @@ class DetallePelicula extends Component {
     }
     }
 
+
   render() {
     return (
         <div>

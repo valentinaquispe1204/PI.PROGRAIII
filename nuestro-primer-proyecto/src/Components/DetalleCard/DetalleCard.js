@@ -40,6 +40,7 @@ class DetalleCard extends Component {
                 <p> RATING : {DetalleCardContenido.DetalleCardContenido.popularity}</p>
                 <p>ESTRENO : {DetalleCardContenido.DetalleCardContenido.release_date}</p>
                 <p> DURACIÓN : {DetalleCardContenido.DetalleCardContenido.runtime}</p>
+                
             </div> :
             <h3>Loader</h3> 
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Filtrador from "../Filtrador/Filtrador";
 import MovieCard from "../NowPlayingCard/NowPlayingCard"
 import topratedtodos from "./topratedtodos.css"
-
+import Loader from "../Loader/Loader";
 class TopRatedTodos extends Component {
     constructor(props) {
         super(props)
@@ -79,13 +79,13 @@ class TopRatedTodos extends Component {
                                     updateStateFavs={(array) => this.updateStateFavs(array)}
 
                                     className="cards" />) :
-                            <h3>Cargando...</h3>
+                            <h3><Loader/></h3>
                     }
+
                     <div className="ContenedorBotonVerMas">
-                        <button className="botonVerMas" onClick={() => this.cargarMasPeliculas()}>
-                            Mas peliculas
-                        </button>
+                        <button className="botonVerMas" onClick={() => this.cargarMasPeliculas()}>More movies</button>
                     </div>
+                    
                 </div>
             </div>
         )
