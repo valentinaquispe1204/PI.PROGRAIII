@@ -1,6 +1,5 @@
 import React, {Component} from "react"
 
-
 class Buscador extends Component {
     constructor(props) {
         super(props);
@@ -12,15 +11,19 @@ class Buscador extends Component {
 
 detenerDefault(evento) {
     evento.preventDefault();
-    this.props.history.push('/busqueda/'+this.state.valorInput)
+    this.props.history.push('/busqueda/' + this.state.valorInput)
   }
 
   guardarInput(evento) {
-    this.setState(
-      {
+    this.setState({
         valorInput: evento.target.value,
-      }
-    );
+      });
+  }
+
+  updateStateFavs(array){
+    this.setState({
+      favoritos: array
+    })
   }
 
 render() {
@@ -37,6 +40,7 @@ render() {
         <i class="fas fa-search search-icon"></i>
       
         {console.log(this.state.valorInput)}
+
       </form>
       </div>
     );

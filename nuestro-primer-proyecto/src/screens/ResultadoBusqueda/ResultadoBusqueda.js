@@ -1,10 +1,7 @@
 import React from 'react';
 import { Component} from 'react';
 import Buscador from '../../Components/Buscador/Buscador';
-import FavoritesCard from '../../Components/FavoritesCard/FavoritesCard';
-import Loader from '../../Components/Loader/Loader';
 import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
-
 
 class ResultadoBusqueda extends Component {
     constructor(props) {
@@ -12,7 +9,7 @@ class ResultadoBusqueda extends Component {
         this.state = {
           valorInput: "",
           peliculas: [],
-          favoritos: localStorage.getItem('favoritos') !== null? localStorage.getItem('favoritos') : []
+          favoritos : localStorage.getItem('favoritos')? JSON.parse(localStorage.getItem('favoritos')) :[],
         };
       }
 
@@ -21,30 +18,32 @@ class ResultadoBusqueda extends Component {
         .then(res => res.json())
         .then( data  => this.setState({ peliculas: data.results}))
         .then( e => console.log(e))
-    
+      }
 
+      updateStateFavs(array){
+        this.setState({
+          favoritos: array
+        })
       }
  
     render(){
         return(
             <div>
+
                 {console.log(this.state.peliculas)}
                 
-                {/* {this.state.peliculas.map ((elm,idx) => 
-                <FavoritesCard actualizarFavoritos={(arr) => this.actualizarFavoritos(arr)}
-                esFavorito={this.state.favoritos.includes(elm.id)} data= {elm}  key={idx + elm.title}/>)} */}
-                {this.state.peliculas.map((elm,idx)=>
-                 <MovieCard
-                 key={idx + elm.title}
-                 data={elm}
-                 estaEnFavorito={this.state.favoritos.includes(elm.id)}
-                 updateStateFavs={(array) => this.updateStateFavs(array)}
+                {this.state.peliculas.map ((elm,idx) => 
+                <MovieCard 
+                data= {elm}  
+                key={idx + elm.title}
 
-                 className="cards" />
-                )}
-                {/* :
-                <Loader/> */}
+                updateStateFavs = {(array) => this.updateStateFavs(array)}
+                estaEnFavorito = {this.state.favoritos.includes(elm.id)}
+                />)}
+               
             </div>
+          
+
         )
     }
 

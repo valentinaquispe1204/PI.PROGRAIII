@@ -30,10 +30,6 @@ class NowPlayingVista extends Component {
       <main>
         <section>
           <h1 className="titulo">SEE ALL IN NOW PLAYING</h1>
-
-          {/* <NowPlayingTodos 
-          pasarle como props la funcion updateStateFavs
-          /> */}
       
         </section>
         </main>
