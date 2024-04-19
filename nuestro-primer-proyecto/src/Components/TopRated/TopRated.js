@@ -47,6 +47,7 @@ render() {
             estaEnFavorito = {this.state.favoritos.includes(elm.id)}
             updateStateFavs = {(array) => this.updateStateFavs(array)}
 
+            className= "cards"
             />) : 
             <h3> Cargandoo ... </h3>
 
