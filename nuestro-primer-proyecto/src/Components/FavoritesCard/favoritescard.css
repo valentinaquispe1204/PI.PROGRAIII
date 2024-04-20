@@ -1,0 +1,43 @@
+.FavoritesCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Ancho fijo para la tarjeta */
+    margin: 20px auto; /* Margen vertical de 20px y centrado horizontal */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  .FavoritesCard .imgcard {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .FavoritesCard h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .FavoritesCard .btnfav {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .FavoritesCard .btnfav:hover {
+    background-color: #0056b3;
+  }
+  

@@ -2,6 +2,8 @@ import React from 'react';
 import { Component} from 'react';
 import Buscador from '../../Components/Buscador/Buscador';
 import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
+import resultadobusqueda from "./resultadobusqueda.css"
+
 
 class ResultadoBusqueda extends Component {
     constructor(props) {
@@ -28,7 +30,7 @@ class ResultadoBusqueda extends Component {
  
     render(){
         return(
-            <div>
+            <div className='divsinclase'>
 
                 {console.log(this.state.peliculas)}
                 

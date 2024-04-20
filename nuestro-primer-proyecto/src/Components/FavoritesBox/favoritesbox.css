@@ -6,3 +6,25 @@
   font-weight: bold;
   /* faltaria centrarlo */
 }
+.FavoritesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Margen superior para separar del borde superior */
+}
+
+.FavoritesBox h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el componente FavoritesCard */
+.FavoritesBox .FavoritesCard {
+  margin-top: 20px;
+}
+
+/* Estilos para el componente NowPlayingCard */
+.FavoritesBox .NowPlayingCard {
+  margin-top: 20px;
+}
