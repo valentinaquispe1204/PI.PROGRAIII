@@ -16,19 +16,13 @@ class Favoritos extends Component {
   render() {
     return (
       <div>
-        <FavoritesBox/>
         {
-          this.state.peliculas.length > 0 
-          ?
-          this.state.peliculas.map((elm, idx) => <NowPlayingCard
-          key = {`${idx}-${elm.name}`}
-          data = {elm}
-          estaEnFavorito = {true}
-          updateStateFavs = {(array) => this.updateStateFavs(array)}
-          />)
+          this.state.favoritos.length > 0 ? 
+          <FavoritesBox/>
           :
           <h1>No tenes ninguna peli favorita aun</h1>
         }
+        
         
       </div>
 

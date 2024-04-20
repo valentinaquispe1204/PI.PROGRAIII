@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import { Link } from "react-router-dom"
 import favoritescard from "./favoritescard.css"
+import DetalleCard from "../DetalleCard/DetalleCard"
 
 class FavoritesCard extends Component {
     constructor(props) {
@@ -42,7 +43,7 @@ render(){
     return (
       // la card de la pelicula que esta en favoritos
       <article className = "FavoritesCard">
-        <Link to={"/DetallePelicula/id/" + this.props.data.id}>
+        <Link to={"/DetallePelicula/id/" + this.props.data.id} >
           <img className="imgcard"src={`https://image.tmdb.org/t/p/w500/${this.props.data.poster_path}/images`} alt={this.props.data.title}></img>
           <h2>{this.props.data.title}</h2>
         </Link>

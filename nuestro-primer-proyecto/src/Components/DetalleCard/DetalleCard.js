@@ -21,13 +21,12 @@ class DetalleCard extends Component {
                 })
             })
             .catch(er => console.log(er))
-
     }
+
 
     render() {
         let DetalleCardContenido = this.state
         console.log(DetalleCardContenido.DetalleCardContenido.id);
-         
         return (
 
              this.state.DetalleCardContenido.length !== 0 ?
@@ -41,12 +40,10 @@ class DetalleCard extends Component {
                 <p>ESTRENO : {DetalleCardContenido.DetalleCardContenido.release_date}</p>
                 <p> DURACIÓN : {DetalleCardContenido.DetalleCardContenido.runtime}</p>
                 
+             
             </div> :
             <h3>Loader</h3> 
-
-                
-
-            
+                        
         )
     }
 }
