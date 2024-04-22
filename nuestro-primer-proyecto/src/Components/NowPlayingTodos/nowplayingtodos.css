@@ -68,6 +68,6 @@
   background-color: #5f5d5d; /* Verde oscuro para el fondo */
   }
   
-  .botonVerMas button:hover {
-  background-color: #524d4d; /* Color de fondo al pasar el ratón */
+  .botonVerMas:hover {
+  background-color: #81b2db; /* Color de fondo al pasar el ratón */
   }

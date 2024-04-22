@@ -6,12 +6,23 @@
   font-weight: bold;
   /* faltaria centrarlo */
 }
-.FavoritesBox {
+
+.tituloFavoriteBox{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px; /* Margen superior para separar del borde superior */
+    color: white;
+    font-weight: bold;
+    background-color: #2e2e2e;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center; 
+}
+
+.FavoritesBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .FavoritesBox h1 {

@@ -19,7 +19,7 @@
   .DetallePelicula p {
     margin-bottom: 10px;
     font-size: 18px;
-    color: rgb(218, 177, 225);
+    color: rgb(201, 218, 231);
   }
   
   .DetallePelicula p:first-child {
@@ -41,8 +41,14 @@
   }
 
   .btnplayingcard{
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 40px;
     background-color:#615e5e;
     font-weight: bold;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .btnplayingcard:hover{
+      background-color: #d751bd;
   }

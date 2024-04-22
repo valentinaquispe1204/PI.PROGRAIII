@@ -39,9 +39,12 @@ class FavoritesBox extends Component {
     render() {
       // let LasQueMuestro = this.state.favoritos
       return (
+        <div>
+          <h1 className='tituloFavoriteBox'>MIS FAVORITOS</h1> 
+        
         <div className = "FavoritesBox">
-          <h1>Mis pelis favoritas</h1>
           {console.log(this.state.favoritos)}
+        </div>
           {
             // para chequear que favoritos es un array luego de la promesa
             Array.isArray(this.state.favoritos) ?
