@@ -1,7 +1,7 @@
  import React, { Component } from "react";
 import { Link } from "react-router-dom"
 import favoritescard from "./favoritescard.css"
-import DetalleCard from "../DetalleCard/DetalleCard"
+//import DetalleCard from "../DetalleCard/DetalleCard"
 
 class FavoritesCard extends Component {
     constructor(props) {

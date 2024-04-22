@@ -1,9 +1,8 @@
 import React, {Component}from 'react';
 import favoritesbox from "./favoritesbox.css"
 import FavoritesCard from '../FavoritesCard/FavoritesCard';
-import NowPlayingCard from '../../Components/NowPlayingCard/NowPlayingCard'
-import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
-
+// import NowPlayingCard from '../../Components/NowPlayingCard/NowPlayingCard'
+// import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
 // import Favoritos from '../../screens/Favoritos/Favoritos';
 
 class FavoritesBox extends Component {
@@ -37,7 +36,6 @@ class FavoritesBox extends Component {
     }
 
     render() {
-      // let LasQueMuestro = this.state.favoritos
       return (
         <div>
           <h1 className='tituloFavoriteBox'>MIS FAVORITOS</h1> 
@@ -46,7 +44,7 @@ class FavoritesBox extends Component {
           {console.log(this.state.favoritos)}
         </div>
           {
-            // para chequear que favoritos es un array luego de la promesa
+            // para chequear que favoritos es un array luego de la promesa, devuelve true o false
             Array.isArray(this.state.favoritos) ?
             this.state.favoritos.map((elm, idx) => 
             <FavoritesCard 

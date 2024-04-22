@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import detallecard from "./detallecard.css"
-
 
 class DetalleCard extends Component {
     constructor(props) {
@@ -37,10 +35,8 @@ class DetalleCard extends Component {
                 <p>GENERO : AGREGAR GENEROS CON MAP </p>
                 <p> SINOPSIS : {DetalleCardContenido.DetalleCardContenido.overview} </p>
                 <p> RATING : {DetalleCardContenido.DetalleCardContenido.popularity}</p>
-                <p>ESTRENO : {DetalleCardContenido.DetalleCardContenido.release_date}</p>
+                <p> ESTRENO : {DetalleCardContenido.DetalleCardContenido.release_date}</p>
                 <p> DURACIÓN : {DetalleCardContenido.DetalleCardContenido.runtime}</p>
-                
-             
             </div> :
             <h3>Loader</h3> 
                         

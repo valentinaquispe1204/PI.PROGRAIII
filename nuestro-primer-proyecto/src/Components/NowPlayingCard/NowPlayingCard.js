@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom"
 import nowplayingcard from "./nowplayingcard.css";
-import NowPlaying from '../NowPlaying/NowPlaying';
 
 class MovieCard extends Component {
     constructor(props) {

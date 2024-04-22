@@ -3,6 +3,7 @@ import Filtrador from "../Filtrador/Filtrador";
 import MovieCard from "../NowPlayingCard/NowPlayingCard"
 import topratedtodos from "./topratedtodos.css"
 import Loader from "../Loader/Loader";
+
 class TopRatedTodos extends Component {
     constructor(props) {
         super(props)

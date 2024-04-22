@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import FavoritesBox from '../../Components/FavoritesBox/FavoritesBox'
-import NowPlayingCard from '../../Components/NowPlayingCard/NowPlayingCard'
 
 class Favoritos extends Component {
 
